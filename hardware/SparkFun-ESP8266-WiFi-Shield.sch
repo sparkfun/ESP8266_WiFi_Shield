@@ -18354,6 +18354,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <smd name="P$2" x="0" y="-1.375" dx="2.2" dy="0.85" layer="1"/>
 <smd name="P$3" x="1.525" y="0" dx="1.05" dy="1" layer="1"/>
 <smd name="P$4" x="-1.525" y="0" dx="1.05" dy="1" layer="1"/>
+<text x="-1.27" y="2.159" size="0.4318" layer="25">&gt;Name</text>
+<text x="-1.27" y="-2.159" size="0.4318" layer="27" align="top-left">&gt;Value</text>
 </package>
 <package name="FTDI_BASIC">
 <wire x1="11.43" y1="0.635" x2="12.065" y2="1.27" width="0.2032" layer="21"/>
@@ -21621,7 +21623,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </part>
 <part name="GND11" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="GND13" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="E2" library="SparkFun-Connectors" deviceset="U.FL" device="" value="U.FL"/>
 <part name="GND16" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="C7" library="SparkFun-Capacitors" deviceset="1.0UF-16V-10%(0603)" device="" value="1.0uF"/>
 <part name="R5" library="SparkFun-Resistors" deviceset="10KOHM1/10W1%(0603)" device="0603" value="10K"/>
@@ -21703,6 +21704,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="S1" library="SparkFun-Electromechanical" deviceset="SWITCH-DPDT" device="AYZ0202" value="DPDT"/>
 <part name="D2" library="SparkFun-LED" deviceset="LED-BLUE" device="0603" value="BLUE"/>
 <part name="SJ3" library="SparkFun-Passives" deviceset="JUMPER-PAD-2-NC_BY_TRACE" device="" value=""/>
+<part name="JP4" library="SparkFun-Connectors" deviceset="U.FL" device="" value="U.FL"/>
 </parts>
 <sheets>
 <sheet>
@@ -21754,7 +21756,6 @@ to use serial terminal debugging.</text>
 </instance>
 <instance part="GND11" gate="1" x="101.6" y="68.58"/>
 <instance part="GND13" gate="1" x="114.3" y="68.58"/>
-<instance part="E2" gate="G$1" x="137.16" y="91.44" rot="MR0"/>
 <instance part="GND16" gate="1" x="142.24" y="78.74"/>
 <instance part="C7" gate="G$1" x="88.9" y="99.06" rot="R90"/>
 <instance part="R5" gate="G$1" x="81.28" y="106.68" rot="R90"/>
@@ -21839,6 +21840,7 @@ to use serial terminal debugging.</text>
 <instance part="S1" gate="G$1" x="127" y="137.16"/>
 <instance part="D2" gate="G$1" x="91.44" y="48.26"/>
 <instance part="SJ3" gate="G$1" x="220.98" y="88.9" rot="R180"/>
+<instance part="JP4" gate="G$1" x="137.16" y="91.44" rot="MR0"/>
 </instances>
 <busses>
 </busses>
@@ -21991,12 +21993,12 @@ to use serial terminal debugging.</text>
 <segment>
 <pinref part="GND16" gate="1" pin="GND"/>
 <wire x1="142.24" y1="81.28" x2="142.24" y2="83.82" width="0.1524" layer="91"/>
-<pinref part="E2" gate="G$1" pin="GND@1"/>
 <wire x1="142.24" y1="83.82" x2="139.7" y2="83.82" width="0.1524" layer="91"/>
-<pinref part="E2" gate="G$1" pin="GND@0"/>
 <wire x1="139.7" y1="86.36" x2="142.24" y2="86.36" width="0.1524" layer="91"/>
 <wire x1="142.24" y1="86.36" x2="142.24" y2="83.82" width="0.1524" layer="91"/>
 <junction x="142.24" y="83.82"/>
+<pinref part="JP4" gate="G$1" pin="GND@0"/>
+<pinref part="JP4" gate="G$1" pin="GND@1"/>
 </segment>
 <segment>
 <wire x1="25.4" y1="157.48" x2="20.32" y2="157.48" width="0.1524" layer="91"/>
@@ -22466,8 +22468,8 @@ to use serial terminal debugging.</text>
 <net name="ANT" class="0">
 <segment>
 <pinref part="R11" gate="G$1" pin="1"/>
-<pinref part="E2" gate="G$1" pin="SIGNAL"/>
 <wire x1="129.54" y1="91.44" x2="132.08" y2="91.44" width="0.1524" layer="91"/>
+<pinref part="JP4" gate="G$1" pin="SIGNAL"/>
 </segment>
 </net>
 <net name="TRACE_ANT" class="0">
