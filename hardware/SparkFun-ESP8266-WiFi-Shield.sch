@@ -139,7 +139,7 @@
 <layer number="254" name="cooling" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="255" name="routoute" color="7" fill="1" visible="yes" active="yes"/>
 </layers>
-<schematic xreflabel="%F%N/%S.%C%R" xrefpart="/%S.%C%R">
+<schematic xreflabel="%F%N/%S" xrefpart="/%S.%C%R">
 <libraries>
 <library name="SparkFun-Aesthetics">
 <description>&lt;h3&gt;SparkFun Electronics' preferred foot prints&lt;/h3&gt;
@@ -21650,7 +21650,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="STANDOFF4" library="SparkFun-Electromechanical" deviceset="STAND-OFF" device=""/>
 <part name="FID2" library="SparkFun-Aesthetics" deviceset="FIDUCIAL" device="1X2"/>
 <part name="FID1" library="SparkFun-Aesthetics" deviceset="FIDUCIAL" device="1X2"/>
-<part name="GND9" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="TP7" library="SparkFun-Passives" deviceset="TEST-POINT" device="3X5" value=""/>
 <part name="LOGO2" library="SparkFun-Aesthetics" deviceset="OSHW-LOGO" device="M" value="OSHW-LOGOM"/>
 <part name="E1" library="esp8266-development-board" deviceset="ANTENNA" device="TRACE" value="ANTENNATRACE"/>
@@ -21705,6 +21704,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="D2" library="SparkFun-LED" deviceset="LED-BLUE" device="0603" value="BLUE"/>
 <part name="SJ3" library="SparkFun-Passives" deviceset="JUMPER-PAD-2-NC_BY_TRACE" device="" value=""/>
 <part name="JP4" library="SparkFun-Connectors" deviceset="U.FL" device="" value="U.FL"/>
+<part name="SUPPLY15" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -21732,6 +21732,8 @@ to use serial terminal debugging.</text>
 <text x="2.54" y="180.34" size="2.54" layer="94">Voltage Regulator</text>
 <text x="2.54" y="114.3" size="2.54" layer="94">ESP8266 &amp;
 4 Mbit Flash</text>
+<text x="251.46" y="58.42" size="1.778" layer="97">- ESP8266 Booting into Bootloader Mode
+  - Set SJ1 to NO</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
@@ -21783,33 +21785,32 @@ to use serial terminal debugging.</text>
 <instance part="STANDOFF4" gate="G$1" x="246.38" y="30.48"/>
 <instance part="FID2" gate="G$1" x="238.76" y="27.94"/>
 <instance part="FID1" gate="G$1" x="236.22" y="25.4"/>
-<instance part="GND9" gate="1" x="91.44" y="25.4"/>
-<instance part="TP7" gate="G$1" x="127" y="38.1" rot="R180"/>
+<instance part="TP7" gate="G$1" x="134.62" y="38.1" rot="R180"/>
 <instance part="LOGO2" gate="G$1" x="71.12" y="12.7"/>
 <instance part="E1" gate="G$1" x="119.38" y="119.38"/>
 <instance part="GND14" gate="1" x="121.92" y="99.06"/>
 <instance part="C4" gate="G$1" x="17.78" y="63.5" rot="R90"/>
 <instance part="C5" gate="G$1" x="17.78" y="58.42" rot="MR270"/>
 <instance part="R1" gate="G$1" x="25.4" y="40.64" rot="R90"/>
-<instance part="R6" gate="G$1" x="91.44" y="35.56" rot="R270"/>
+<instance part="R6" gate="G$1" x="86.36" y="53.34"/>
 <instance part="R4" gate="G$1" x="78.74" y="83.82" smashed="yes" rot="R180">
 <attribute name="NAME" x="72.898" y="84.0486" size="1.778" layer="95"/>
 <attribute name="VALUE" x="81.026" y="84.074" size="1.778" layer="96"/>
 </instance>
-<instance part="TP6" gate="G$1" x="127" y="43.18" rot="R180"/>
-<instance part="TP5" gate="G$1" x="127" y="48.26" rot="R180"/>
-<instance part="TP1" gate="G$1" x="127" y="68.58" rot="R180"/>
-<instance part="TP2" gate="G$1" x="127" y="63.5" rot="R180"/>
-<instance part="TP3" gate="G$1" x="127" y="58.42" rot="R180"/>
-<instance part="TP4" gate="G$1" x="127" y="53.34" rot="R180"/>
+<instance part="TP6" gate="G$1" x="134.62" y="43.18" rot="R180"/>
+<instance part="TP5" gate="G$1" x="134.62" y="48.26" rot="R180"/>
+<instance part="TP1" gate="G$1" x="134.62" y="68.58" rot="R180"/>
+<instance part="TP2" gate="G$1" x="134.62" y="63.5" rot="R180"/>
+<instance part="TP3" gate="G$1" x="134.62" y="58.42" rot="R180"/>
+<instance part="TP4" gate="G$1" x="134.62" y="53.34" rot="R180"/>
 <instance part="U1" gate="G$1" x="35.56" y="157.48">
 <attribute name="PROD_ID" x="35.56" y="157.48" size="2.54" layer="96" display="off"/>
 </instance>
 <instance part="C9" gate="G$1" x="139.7" y="15.24"/>
 <instance part="R2" gate="G$1" x="63.5" y="144.78" rot="R270"/>
 <instance part="GND8" gate="1" x="63.5" y="134.62"/>
-<instance part="R8" gate="G$1" x="111.76" y="40.64" rot="R90"/>
-<instance part="GND12" gate="1" x="111.76" y="30.48"/>
+<instance part="R8" gate="G$1" x="124.46" y="45.72" rot="R90"/>
+<instance part="GND12" gate="1" x="124.46" y="35.56"/>
 <instance part="SUPPLY13" gate="G$1" x="226.06" y="58.42"/>
 <instance part="D3" gate="G$1" x="220.98" y="43.18" rot="MR0"/>
 <instance part="SJ2" gate="G$1" x="213.36" y="58.42"/>
@@ -21838,9 +21839,10 @@ to use serial terminal debugging.</text>
 <instance part="GND18" gate="1" x="236.22" y="127" rot="MR0"/>
 <instance part="GND19" gate="1" x="241.3" y="127" rot="MR0"/>
 <instance part="S1" gate="G$1" x="127" y="137.16"/>
-<instance part="D2" gate="G$1" x="91.44" y="48.26"/>
+<instance part="D2" gate="G$1" x="99.06" y="53.34" rot="R270"/>
 <instance part="SJ3" gate="G$1" x="220.98" y="88.9" rot="R180"/>
 <instance part="JP4" gate="G$1" x="137.16" y="91.44" rot="MR0"/>
+<instance part="SUPPLY15" gate="G$1" x="104.14" y="55.88"/>
 </instances>
 <busses>
 </busses>
@@ -21945,6 +21947,12 @@ to use serial terminal debugging.</text>
 <wire x1="142.24" y1="172.72" x2="142.24" y2="175.26" width="0.1524" layer="91"/>
 <junction x="142.24" y="172.72"/>
 </segment>
+<segment>
+<pinref part="D2" gate="G$1" pin="A"/>
+<pinref part="SUPPLY15" gate="G$1" pin="VCC"/>
+<wire x1="101.6" y1="53.34" x2="104.14" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="53.34" x2="104.14" y2="55.88" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="GND" class="0">
 <segment>
@@ -22028,11 +22036,6 @@ to use serial terminal debugging.</text>
 <wire x1="15.24" y1="152.4" x2="15.24" y2="149.86" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="GND9" gate="1" pin="GND"/>
-<wire x1="91.44" y1="27.94" x2="91.44" y2="30.48" width="0.1524" layer="91"/>
-<pinref part="R6" gate="G$1" pin="2"/>
-</segment>
-<segment>
 <pinref part="E1" gate="G$1" pin="GND"/>
 <pinref part="GND14" gate="1" pin="GND"/>
 <wire x1="121.92" y1="109.22" x2="121.92" y2="101.6" width="0.1524" layer="91"/>
@@ -22045,7 +22048,7 @@ to use serial terminal debugging.</text>
 <segment>
 <pinref part="R8" gate="G$1" pin="1"/>
 <pinref part="GND12" gate="1" pin="GND"/>
-<wire x1="111.76" y1="33.02" x2="111.76" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="38.1" x2="124.46" y2="40.64" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="JP2" gate="G$1" pin="6"/>
@@ -22157,8 +22160,8 @@ to use serial terminal debugging.</text>
 </segment>
 <segment>
 <pinref part="TP7" gate="G$1" pin="1"/>
-<wire x1="127" y1="38.1" x2="129.54" y2="38.1" width="0.1524" layer="91"/>
-<label x="129.54" y="38.1" size="1.27" layer="95" xref="yes"/>
+<wire x1="134.62" y1="38.1" x2="137.16" y2="38.1" width="0.1524" layer="91"/>
+<label x="137.16" y="38.1" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="LNA" class="0">
@@ -22258,12 +22261,8 @@ to use serial terminal debugging.</text>
 <net name="GPIO5" class="0">
 <segment>
 <pinref part="U2" gate="G$1" pin="GPIO5"/>
-<wire x1="71.12" y1="53.34" x2="91.44" y2="53.34" width="0.1524" layer="91"/>
-<wire x1="91.44" y1="53.34" x2="91.44" y2="50.8" width="0.1524" layer="91"/>
-<wire x1="91.44" y1="53.34" x2="93.98" y2="53.34" width="0.1524" layer="91"/>
-<junction x="91.44" y="53.34"/>
-<label x="93.98" y="53.34" size="1.27" layer="95" xref="yes"/>
-<pinref part="D2" gate="G$1" pin="A"/>
+<wire x1="71.12" y1="53.34" x2="81.28" y2="53.34" width="0.1524" layer="91"/>
+<pinref part="R6" gate="G$1" pin="1"/>
 </segment>
 <segment>
 <wire x1="177.8" y1="81.28" x2="180.34" y2="81.28" width="0.1524" layer="91"/>
@@ -22295,8 +22294,8 @@ to use serial terminal debugging.</text>
 <pinref part="U3" gate="G$1" pin="!WP!(D2)"/>
 </segment>
 <segment>
-<wire x1="127" y1="68.58" x2="129.54" y2="68.58" width="0.1524" layer="91"/>
-<label x="129.54" y="68.58" size="1.27" layer="95" rot="MR180" xref="yes"/>
+<wire x1="134.62" y1="68.58" x2="137.16" y2="68.58" width="0.1524" layer="91"/>
+<label x="137.16" y="68.58" size="1.27" layer="95" rot="MR180" xref="yes"/>
 <pinref part="TP1" gate="G$1" pin="1"/>
 </segment>
 </net>
@@ -22312,8 +22311,8 @@ to use serial terminal debugging.</text>
 <pinref part="U3" gate="G$1" pin="!HOLD!(D3)"/>
 </segment>
 <segment>
-<wire x1="127" y1="53.34" x2="129.54" y2="53.34" width="0.1524" layer="91"/>
-<label x="129.54" y="53.34" size="1.27" layer="95" rot="MR180" xref="yes"/>
+<wire x1="134.62" y1="53.34" x2="137.16" y2="53.34" width="0.1524" layer="91"/>
+<label x="137.16" y="53.34" size="1.27" layer="95" rot="MR180" xref="yes"/>
 <pinref part="TP4" gate="G$1" pin="1"/>
 </segment>
 </net>
@@ -22329,8 +22328,8 @@ to use serial terminal debugging.</text>
 <pinref part="U3" gate="G$1" pin="SI(D0)"/>
 </segment>
 <segment>
-<wire x1="127" y1="63.5" x2="129.54" y2="63.5" width="0.1524" layer="91"/>
-<label x="129.54" y="63.5" size="1.27" layer="95" rot="MR180" xref="yes"/>
+<wire x1="134.62" y1="63.5" x2="137.16" y2="63.5" width="0.1524" layer="91"/>
+<label x="137.16" y="63.5" size="1.27" layer="95" rot="MR180" xref="yes"/>
 <pinref part="TP2" gate="G$1" pin="1"/>
 </segment>
 </net>
@@ -22346,8 +22345,8 @@ to use serial terminal debugging.</text>
 <pinref part="U3" gate="G$1" pin="SO(D1)"/>
 </segment>
 <segment>
-<wire x1="127" y1="48.26" x2="129.54" y2="48.26" width="0.1524" layer="91"/>
-<label x="129.54" y="48.26" size="1.27" layer="95" rot="MR180" xref="yes"/>
+<wire x1="134.62" y1="48.26" x2="137.16" y2="48.26" width="0.1524" layer="91"/>
+<label x="137.16" y="48.26" size="1.27" layer="95" rot="MR180" xref="yes"/>
 <pinref part="TP5" gate="G$1" pin="1"/>
 </segment>
 </net>
@@ -22363,8 +22362,8 @@ to use serial terminal debugging.</text>
 <pinref part="U3" gate="G$1" pin="SCK"/>
 </segment>
 <segment>
-<wire x1="127" y1="58.42" x2="129.54" y2="58.42" width="0.1524" layer="91"/>
-<label x="129.54" y="58.42" size="1.27" layer="95" rot="MR180" xref="yes"/>
+<wire x1="134.62" y1="58.42" x2="137.16" y2="58.42" width="0.1524" layer="91"/>
+<label x="137.16" y="58.42" size="1.27" layer="95" rot="MR180" xref="yes"/>
 <pinref part="TP3" gate="G$1" pin="1"/>
 </segment>
 </net>
@@ -22380,8 +22379,8 @@ to use serial terminal debugging.</text>
 <pinref part="U3" gate="G$1" pin="!CS!"/>
 </segment>
 <segment>
-<wire x1="127" y1="43.18" x2="129.54" y2="43.18" width="0.1524" layer="91"/>
-<label x="129.54" y="43.18" size="1.27" layer="95" rot="MR180" xref="yes"/>
+<wire x1="134.62" y1="43.18" x2="137.16" y2="43.18" width="0.1524" layer="91"/>
+<label x="137.16" y="43.18" size="1.27" layer="95" rot="MR180" xref="yes"/>
 <pinref part="TP6" gate="G$1" pin="1"/>
 </segment>
 </net>
@@ -22405,9 +22404,9 @@ to use serial terminal debugging.</text>
 </segment>
 <segment>
 <pinref part="R8" gate="G$1" pin="2"/>
-<wire x1="111.76" y1="45.72" x2="111.76" y2="48.26" width="0.1524" layer="91"/>
-<wire x1="111.76" y1="48.26" x2="109.22" y2="48.26" width="0.1524" layer="91"/>
-<label x="109.22" y="48.26" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="124.46" y1="50.8" x2="124.46" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="53.34" x2="121.92" y2="53.34" width="0.1524" layer="91"/>
+<label x="121.92" y="53.34" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <wire x1="177.8" y1="83.82" x2="180.34" y2="83.82" width="0.1524" layer="91"/>
@@ -22456,13 +22455,6 @@ to use serial terminal debugging.</text>
 <pinref part="U2" gate="G$1" pin="SPICLK/SD_CLK"/>
 <wire x1="71.12" y1="83.82" x2="73.66" y2="83.82" width="0.1524" layer="91"/>
 <pinref part="R4" gate="G$1" pin="2"/>
-</segment>
-</net>
-<net name="N$15" class="0">
-<segment>
-<wire x1="91.44" y1="40.64" x2="91.44" y2="43.18" width="0.1524" layer="91"/>
-<pinref part="R6" gate="G$1" pin="1"/>
-<pinref part="D2" gate="G$1" pin="C"/>
 </segment>
 </net>
 <net name="ANT" class="0">
@@ -22641,6 +22633,13 @@ to use serial terminal debugging.</text>
 <pinref part="JP2" gate="G$1" pin="4"/>
 <wire x1="210.82" y1="88.9" x2="215.9" y2="88.9" width="0.1524" layer="91"/>
 <pinref part="SJ3" gate="G$1" pin="2"/>
+</segment>
+</net>
+<net name="N$9" class="0">
+<segment>
+<pinref part="R6" gate="G$1" pin="2"/>
+<pinref part="D2" gate="G$1" pin="C"/>
+<wire x1="93.98" y1="53.34" x2="91.44" y2="53.34" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
