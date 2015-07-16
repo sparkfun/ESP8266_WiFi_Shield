@@ -1,0 +1,35 @@
+#ifndef __USER_CONFIG_H__
+#define __USER_CONFIG_H__
+
+#include "eagle_soc.h"
+
+#define AT_CUSTOM_UPGRADE
+
+#define DEFAULT_BAUD_RATE 9600
+
+#define WELCOME_MESSAGE "READY!"
+
+#define STATUS_LED_PIN  5
+#define STATUS_LED_FUNC FUNC_GPIO5
+#define STATUS_LED_MUX  PERIPHS_IO_MUX_GPIO5_U
+
+#define ARDUINO_RESET_PIN	4
+
+#define HIGH 1
+#define LOW  0
+
+#define UART0 0
+
+#define SET_DUINO_RST_CMD "+DUINORST"
+#define SET_DUINO_RST_CMD_SIZE 9
+
+#define SET_PINMODE_CMD "+PINMODE"
+#define SET_PINMODE_CMD_SIZE 8
+
+#define WRITE_PIN_CMD "+PINWRITE"
+#define WRITE_PIN_CMD_SIZE 9
+
+#define READ_PIN_CMD "+PINREAD"
+#define READ_PIN_CMD_SIZE 8
+
+#endif
